@@ -53,21 +53,22 @@ QA-Automation-Project/
 ├── pom.xml
 ├── testng.xml
 ├── README.md
-├── Test-Scenarios.md
-├── Test-Cases.md
-└── Test-Execution-Report.md
+├── SauceDemo_Bug_Report.xlsx
+└── SauceDemo_Automation_Execution_Report .md
 ```
 
 ---
 
 ## ✅ Automated Test Coverage
 
-### 🔐 Login Module (5 Test Cases)
+### 🔐 Login Module (7 Test Cases)
 
 * Verify login with valid credentials
 * Verify login with invalid username
 * Verify login with invalid password
 * Verify login with invalid username and password
+* Login with empty username
+* Login with empty password
 * Verify login with empty credentials
 
 ### 🛒 Product Module (6 Test Cases)
@@ -79,9 +80,13 @@ QA-Automation-Project/
 * Verify price validation during checkout
 * Verify cart persistence after page refresh
 
-### 💳 Checkout Module (1 Test Case)
+### 💳 Checkout Module (5 Test Case)
 
-* Verify successful checkout process
+* Successful checkout
+* Empty first name
+* Empty last name
+* Empty postal code
+* All fields empty
 
 ---
 
@@ -89,10 +94,10 @@ QA-Automation-Project/
 
 | Module    | Total Cases | Passed | Failed |
 | --------- | ----------- | ------ | ------ |
-| Login     | 5           | 5      | 0      |
+| Login     | 7           | 7      | 0      |
 | Product   | 6           | 6      | 0      |
-| Checkout  | 1           | 1      | 0      |
-| **Total** | **12**      | **12** | **0**  |
+| Checkout  | 5           | 5      | 0      |
+| **Total** | **18**      | **18** | **0**  |
 
 ### 🎉 Overall Result
 

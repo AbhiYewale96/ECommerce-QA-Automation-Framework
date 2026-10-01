@@ -39,23 +39,46 @@ The framework validates critical business workflows such as user authentication,
 ## 📂 Project Structure
 
 ```text
-QA-Automation-Project/
+ECommerce-QA-Automation-Framework/
 │
-├── src
-│   ├── main
-│   └── test
-│       ├── base
-│       ├── pages
-│       ├── tests
-│       └── utils
+├── .idea/                                  # IDE configuration files
+├── Report/                                 # Test execution reports (ExtentReports / TestNG reports)
+├── Screenshots/                            # Failed test case screenshots
+├── Sheet/                                  # Test data sheets (Excel / CSV test data)
 │
-├── screenshots/
-├── pom.xml
-├── testng.xml
-├── README.md
-├── SauceDemo_Bug_Report.xlsx
-└── SauceDemo_Automation_Execution_Report .md
-```
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── org/example/                # Application source code / Core logic (if applicable)
+│   │
+│   └── test/
+│       ├── java/
+│       │   ├── base/                       # Base setup & tear down
+│       │   │   └── BaseTest.java           # WebDriver initialization, browser setup, configs
+│       │   │
+│       │   ├── pages/                      # Page Object Model (POM) classes
+│       │   │   ├── LoginPage.java          # Locators and actions for Login page
+│       │   │   ├── ProductsPage.java       # Locators and actions for Inventory/Product page
+│       │   │   ├── CartPage.java           # Locators and actions for Shopping Cart
+│       │   │   └── CheckoutPage.java       # Locators and actions for Checkout flow
+│       │   │
+│       │   ├── tests/                      # TestNG test classes
+│       │   │   ├── LoginTest.java          # Login functional & negative test cases
+│       │   │   ├── ProductTest.java        # Add to cart, badge count, product verification
+│       │   │   └── CheckoutTest.java       # Checkout flow & form validation tests
+│       │   │
+│       │   └── utils/                      # Helper & Utility classes
+│       │       ├── ConfigReader.java       # Reading property files (config.properties)
+│       │       ├── ExcelUtils.java         # Reading/Writing Excel test data
+│       │       └── ScreenshotUtils.java    # Capturing screenshots on failure
+│       │
+│       └── resources/                      # (Optional) TestNG XML & properties
+│           ├── testng.xml                  # Test suite runner configuration
+│           └── config.properties           # Base URL, browser type, timeouts
+│
+├── .gitignore                              # Git ignore rules (ignoring .idea, target, logs)
+├── pom.xml                                 # Maven dependencies (Selenium, TestNG, Apache POI, etc.)
+└── README.md                               # Project documentation & execution guide```
 
 ---
 

@@ -1,206 +1,217 @@
-# 🚀 QA Automation Testing Framework
+# 🚀 E-Commerce QA Automation Framework
 
-## 📌 Project Overview
+![Java](https://img.shields.io/badge/Java-17%2B-orange?logo=openjdk&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?logo=selenium&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-Testing_Framework-red)
+![Maven](https://img.shields.io/badge/Maven-Build_Tool-C71A36?logo=apachemaven&logoColor=white)
+![Test Cases](https://img.shields.io/badge/UI_Test_Cases-18-blue)
+![Design Pattern](https://img.shields.io/badge/Design_Pattern-POM-informational)
 
-This project is an automated testing framework developed for the SauceDemo e-commerce application using Selenium WebDriver, Java, TestNG, and Maven.
+A scalable **End-to-End (E2E) Test Automation Framework** developed using **Java, Selenium WebDriver, TestNG, and Maven** to validate critical user workflows in the [SauceDemo E-Commerce Application](https://www.saucedemo.com/).
 
-The framework validates critical business workflows such as user authentication, product management, shopping cart functionality, and checkout processes. It follows the Page Object Model (POM) design pattern to improve test maintainability, scalability, and reusability.
+Built using the **Page Object Model (POM)** design pattern, this framework focuses on maintainable automation, reusable components, functional validation, negative testing, and automated screenshot capture.
 
----
+## 📌 Key Features
 
-## 🎯 Project Objectives
-
-✅ Automate end-to-end testing of core application workflows
-
-✅ Reduce manual testing effort through automation
-
-✅ Validate functional requirements and UI behavior
-
-✅ Generate execution evidence through automated screenshots
-
-✅ Demonstrate industry-standard QA Automation practices
-
----
+- **Page Object Model (POM):** Separates page locators and reusable actions from test logic.
+- **End-to-End Testing:** Automates login, product selection, cart management, and checkout workflows.
+- **Functional & Negative Testing:** Validates successful scenarios, invalid credentials, and checkout form errors.
+- **TestNG Integration:** Organizes test cases and provides assertions and test execution management.
+- **Screenshot Capture:** Supports capturing test execution evidence for debugging and failure analysis.
+- **Maven Integration:** Manages dependencies and simplifies test execution.
+- **Reusable Architecture:** Organizes base setup, page objects, test classes, and utility components.
+- **Test Reporting:** Supports reviewing execution results through configured TestNG reports.
 
 ## 🛠️ Tech Stack
 
-| Technology              | Purpose                  |
-| ----------------------- | ------------------------ |
-| Java                    | Programming Language     |
-| Selenium WebDriver      | Browser Automation       |
-| TestNG                  | Test Execution Framework |
-| Maven                   | Dependency Management    |
-| Page Object Model (POM) | Test Design Pattern      |
-| Git & GitHub            | Version Control          |
-| IntelliJ IDEA           | Development Environment  |
+| Technology | Purpose |
+|---|---|
+| [Java](https://www.oracle.com/java/) | Programming language |
+| [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/) | Browser automation |
+| [TestNG](https://testng.org/) | Test execution and assertions |
+| [Apache Maven](https://maven.apache.org/) | Dependency management |
+| [Page Object Model](https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/) | Automation design pattern |
+| [Apache POI](https://poi.apache.org/) | Excel data handling, if configured |
+| [Git](https://git-scm.com/) | Version control |
+| [GitHub](https://github.com/) | Source code hosting |
 
----
-
-## 📂 Project Structure
+## 🏗️ Project Structure
 
 ```text
 ECommerce-QA-Automation-Framework/
 │
-├── .idea/                                  # IDE configuration files
-├── Report/                                 # Test execution reports (ExtentReports / TestNG reports)
-├── Screenshots/                            # Failed test case screenshots
-├── Sheet/                                  # Test data sheets (Excel / CSV test data)
+├── Report/                         # Test execution reports
+├── Screenshots/                    # Captured test screenshots
+├── Sheet/                           # Test data files
 │
 ├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── org/example/                # Application source code / Core logic (if applicable)
-│   │
 │   └── test/
 │       ├── java/
-│       │   ├── base/                       # Base setup & tear down
-│       │   │   └── BaseTest.java           # WebDriver initialization, browser setup, configs
+│       │   ├── base/
+│       │   │   └── BaseTest.java
 │       │   │
-│       │   ├── pages/                      # Page Object Model (POM) classes
-│       │   │   ├── LoginPage.java          # Locators and actions for Login page
-│       │   │   ├── ProductsPage.java       # Locators and actions for Inventory/Product page
-│       │   │   ├── CartPage.java           # Locators and actions for Shopping Cart
-│       │   │   └── CheckoutPage.java       # Locators and actions for Checkout flow
+│       │   ├── pages/
+│       │   │   ├── LoginPage.java
+│       │   │   ├── ProductsPage.java
+│       │   │   ├── CartPage.java
+│       │   │   └── CheckoutPage.java
 │       │   │
-│       │   ├── tests/                      # TestNG test classes
-│       │   │   ├── LoginTest.java          # Login functional & negative test cases
-│       │   │   ├── ProductTest.java        # Add to cart, badge count, product verification
-│       │   │   └── CheckoutTest.java       # Checkout flow & form validation tests
+│       │   ├── tests/
+│       │   │   ├── LoginTest.java
+│       │   │   ├── ProductTest.java
+│       │   │   └── CheckoutTest.java
 │       │   │
-│       │   └── utils/                      # Helper & Utility classes
-│       │       ├── ConfigReader.java       # Reading property files (config.properties)
-│       │       ├── ExcelUtils.java         # Reading/Writing Excel test data
-│       │       └── ScreenshotUtils.java    # Capturing screenshots on failure
+│       │   └── utils/
+│       │       ├── ConfigReader.java
+│       │       ├── ExcelUtils.java
+│       │       └── ScreenshotUtils.java
 │       │
-│       └── resources/                      # (Optional) TestNG XML & properties
-│           ├── testng.xml                  # Test suite runner configuration
-│           └── config.properties           # Base URL, browser type, timeouts
+│       └── resources/
+│           ├── testng.xml
+│           └── config.properties
 │
-├── .gitignore                              # Git ignore rules (ignoring .idea, target, logs)
-├── pom.xml                                 # Maven dependencies (Selenium, TestNG, Apache POI, etc.)
-└── README.md                               # Project documentation & execution guide```
+├── .gitignore
+├── pom.xml
+└── README.md
+```
 
----
+*Note: The structure reflects the documented framework layout. Keep entries that exist in the actual repository.*
 
-## ✅ Automated Test Coverage
+## 🧪 Test Coverage
 
-### 🔐 Login Module (7 Test Cases)
+### 1. Authentication — `LoginTest.java`
 
-* Verify login with valid credentials
-* Verify login with invalid username
-* Verify login with invalid password
-* Verify login with invalid username and password
-* Login with empty username
-* Login with empty password
-* Verify login with empty credentials
+**7 Test Scenarios**
 
-### 🛒 Product Module (6 Test Cases)
+- Login with valid credentials
+- Login with an invalid username
+- Login with an invalid password
+- Login with invalid username and password
+- Validation for an empty username
+- Validation for an empty password
+- Validation when both fields are empty
 
-* Verify product can be added to cart
-* Verify multiple products can be added
-* Verify cart quantity updates dynamically
-* Verify product removal from cart
-* Verify price validation during checkout
-* Verify cart persistence after page refresh
+### 2. Product & Shopping Cart — `ProductTest.java`
 
-### 💳 Checkout Module (5 Test Case)
+**6 Test Scenarios**
 
-* Successful checkout
-* Empty first name
-* Empty last name
-* Empty postal code
-* All fields empty
+- Verify a product can be added to the cart
+- Verify multiple products can be added
+- Validate dynamic cart badge updates
+- Verify product removal from the cart
+- Validate product prices during checkout
+- Verify cart state after a page refresh
 
----
+### 3. Checkout — `CheckoutTest.java`
+
+**5 Test Scenarios**
+
+- Complete a successful checkout
+- Validate missing first name
+- Validate missing last name
+- Validate missing postal code
+- Validate submission with all required fields empty
 
 ## 📊 Test Execution Summary
 
-| Module    | Total Cases | Passed | Failed |
-| --------- | ----------- | ------ | ------ |
-| Login     | 7           | 7      | 0      |
-| Product   | 6           | 6      | 0      |
-| Checkout  | 5           | 5      | 0      |
-| **Total** | **18**      | **18** | **0**  |
+| Module | Test Cases | Passed | Failed |
+|---|---:|---:|---:|
+| Authentication | 7 | 7 | 0 |
+| Product & Cart | 6 | 6 | 0 |
+| Checkout | 5 | 5 | 0 |
+| **Total** | **18** | **18** | **0** |
 
-### 🎉 Overall Result
+**Reported Pass Rate: 100%**
 
-**Pass Rate: 100%**
-
-All automated test cases executed successfully and validated expected application behavior.
-
----
+*The figures above reflect the supplied execution summary. Verify them against the latest TestNG report before publishing.*
 
 ## 📸 Screenshot Reporting
 
-The framework automatically captures screenshots for:
+The framework includes screenshot utilities to support test execution evidence and troubleshooting.
 
-* ✅ Passed Test Cases
-* ❌ Failed Test Cases
-* ⚠️ Skipped Test Cases
+- **Failure Evidence:** Capture screenshots when a test fails, if configured.
+- **Visual Validation:** Review the browser state during test execution.
+- **Debugging Support:** Use screenshots to investigate unexpected UI behavior.
 
-Screenshots are stored inside the `screenshots` directory for execution evidence and debugging purposes.
+Screenshots are saved to the configured output directory.
 
----
+## ⚙️ Getting Started
 
-## ▶️ How to Execute Tests
+### Prerequisites
 
-### Clone Repository
+- [Java JDK](https://adoptium.net/)
+- [Apache Maven](https://maven.apache.org/download.cgi)
+- [Git](https://git-scm.com/downloads)
+- [Google Chrome](https://www.google.com/chrome/) or another configured browser
+
+### Installation
+
+**1. Clone the repository**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/AbhiYewale96/QA-Automation-Project.git
 ```
 
-### Navigate to Project
+**2. Navigate to the project directory**
 
 ```bash
 cd QA-Automation-Project
 ```
 
-### Run Tests
+**3. Compile the project**
+
+```bash
+mvn clean compile
+```
+
+**4. Execute the test suite**
 
 ```bash
 mvn test
 ```
 
----
+**5. Review test reports**
 
-## 🔥 Key Features
+Check the Maven Surefire reports, typically generated under:
 
-✔ Selenium WebDriver Automation
+```text
+target/surefire-reports/
+```
 
-✔ TestNG Framework Integration
+The exact report and screenshot locations depend on the framework configuration.
 
-✔ Maven Build Management
+## ▶️ Test Execution Commands
 
-✔ Page Object Model (POM)
+| Execution Goal | Command |
+|---|---|
+| Run automated tests | `mvn test` |
+| Clean and run tests | `mvn clean test` |
+| Compile project | `mvn clean compile` |
 
-✔ Automated Screenshot Capture
+## 🔗 Useful Resources
 
-✔ Reusable Framework Structure
-
-✔ Functional & UI Validation
-
-✔ Git Version Control
-
----
+- **Application Under Test:** [SauceDemo](https://www.saucedemo.com/)
+- **Selenium Documentation:** [Official Documentation](https://www.selenium.dev/documentation/)
+- **TestNG Documentation:** [Official Documentation](https://testng.org/)
+- **Maven Documentation:** [Official Documentation](https://maven.apache.org/guides/)
 
 ## 📈 Future Enhancements
 
-* Extent Reports Integration
-* Data-Driven Testing using Excel
-* Cross-Browser Testing
-* Jenkins CI/CD Integration
-* Parallel Test Execution
-* API Testing Integration
-
----
+- Integrate ExtentReports for detailed execution reports.
+- Expand data-driven testing with Excel and TestNG DataProviders.
+- Add cross-browser test execution.
+- Implement parallel test execution.
+- Integrate automated testing into GitHub Actions or Jenkins.
+- Extend coverage with REST API testing using REST Assured.
 
 ## 👨‍💻 Author
 
 **Abhishek Yewale**
 
-Aspiring QA Automation Engineer passionate about software quality, test automation, and continuous learning.
+QA Automation Engineer | Aspiring SDET
+
+GitHub: [@AbhiYewale96](https://github.com/AbhiYewale96)
 
 ---
 
-⭐ If you found this project useful, feel free to star the repository.
+⭐ If you find this project useful, feel free to explore the repository and share feedback.
